@@ -383,6 +383,12 @@ public class UiAutomatorView extends Composite {
                 redrawScreenshot();
                 if (selectedNode != null) {
                     loadAttributeTable();
+                    //write to file here
+                    if(xpathStatic!=null){
+                    	FileUtils.writeLine(xpathStatic);
+                    }else{
+                    	FileUtils.writeLine(classNameStatic);
+                    }
                 }
             }
         });
